@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Moonveil Academy — Lysantra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moonveil Academy — Domain of Lysantra">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Crimson+Text:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0e0f13; --ink:#e9e9f5; --muted:#b9b9d6; --accent:#c9c3ff22; --line:#2a2b36;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:radial-gradient(1200px 600px at 70% 10%, var(--accent), transparent) var(--bg);
+      color:var(--ink); font-family:"Crimson Text", serif; display:flex; align-items:center; justify-content:center;
+    }
+    .card{
+      width:min(780px, 92vw); padding:48px 36px; border:1px solid var(--line);
+      border-radius:18px; background:linear-gradient(180deg, #12131a 0%, #0f1117 100%);
+      box-shadow:0 20px 60px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.02);
+      text-align:center;
+    }
+    h1{
+      font-family:"Marcellus", serif; letter-spacing:.06em; font-size:clamp(28px,4.5vw,44px); margin:0 0 8px;
+    }
+    .subtitle{color:var(--muted); font-style:italic; margin:0 0 22px;}
+    .rule{height:1px; background:linear-gradient(90deg, transparent, var(--line), transparent); margin:24px 0;}
+    .blurb{line-height:1.7; margin:0 auto 22px; max-width:60ch; color:#dcdcf2;}
+    .pill{
+      display:inline-block; padding:10px 16px; border:1px solid var(--line); border-radius:999px;
+      text-decoration:none; color:var(--ink); transition:.2s transform ease;
+    }
+    .pill:hover{transform:translateY(-1px)}
+    footer{margin-top:20px; color:var(--muted); font-size:14px}
+    .crest{
+      width:72px; height:72px; margin:0 auto 14px; border-radius:50%;
+      border:1px solid var(--line); display:grid; place-items:center; position:relative;
+      background:radial-gradient(36px 36px at 50% 40%, #1a1b24, #0f1117);
+    }
+    .moon{
+      width:30px; height:30px; border-radius:50%;
+      background:#e9e9f5; box-shadow:0 0 40px #e9e9f5aa;
+      clip-path: circle(50% at 60% 50%);
+      opacity:.95
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-label="Moonveil Academy">
+    <div class="crest" aria-hidden="true"><div class="moon"></div></div>
+    <h1>Moonveil Academy</h1>
+    <p class="subtitle">Domain of Lysantra</p>
+    <div class="rule"></div>
+    <p class="blurb">
+      A quiet place of discipline and grace. When the servers wake, the veil will open:
+      study halls, labs, and little midnight experiments. Until then, consider this a lantern
+      left in the window.
+    </p>
+    <a class="pill" href="mailto:admin@lysantra.com">Contact</a>
+    <footer>© <span id="y"></span> Lysantra — All rights reserved.</footer>
+  </main>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
